@@ -1,0 +1,26 @@
+server:
+  servlet:
+    context-path: /temperature-monitor/api
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:demodb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+openweathermap:
+  api:
+    url: https://api.openweathermap.org/data/2.5
+    key: ${openweathermap.api.key}
+
+springdoc:
+  swagger-ui:
+    path: /temperature-monitor/api/swagger-ui.html
+  api-docs:
+    path: /temperature-monitor/api/v3/api-docs
