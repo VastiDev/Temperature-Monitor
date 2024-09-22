@@ -2,6 +2,7 @@ package com.vastidev.temperature_monitor.controller;
 
 import com.vastidev.temperature_monitor.domain.Location;
 import com.vastidev.temperature_monitor.dtos.LocationDto;
+import com.vastidev.temperature_monitor.dtos.WeatherResponseDto;
 import com.vastidev.temperature_monitor.service.LocationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

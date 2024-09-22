@@ -25,7 +25,10 @@ public class Location {
     private String cityName;
     private String stateName;
     @NotBlank(message = "Field can not be empty!")
-    private String countryName;
+    private String countryCode;
+
+    private Double temperature;
+    private String weatherDescription;
 
     private LocalDateTime created;
 
