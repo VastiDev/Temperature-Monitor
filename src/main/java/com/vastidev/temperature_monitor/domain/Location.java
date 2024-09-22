@@ -30,6 +30,8 @@ public class Location {
     private Double temperature;
     private String weatherDescription;
 
+    private LocalDateTime lastUpdate;
+
     private LocalDateTime created;
 
 }

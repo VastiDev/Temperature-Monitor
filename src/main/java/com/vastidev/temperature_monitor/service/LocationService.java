@@ -5,7 +5,7 @@ import com.vastidev.temperature_monitor.domain.Location;
 import com.vastidev.temperature_monitor.dtos.WeatherResponseDto;
 import com.vastidev.temperature_monitor.repository.LocationRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -19,6 +19,8 @@ public class LocationService {
     private final LocationRepository locationRepository;
     private final WeatherClient weatherClient;
 
+    @Value("${openweathermap.api.key}")
+    private String apiKey;
 
     public Location save(Location location) {
         location.setCreated(LocalDateTime.now());
@@ -36,7 +38,6 @@ public class LocationService {
     }
 
     public WeatherResponseDto getWeatherData(String cityQuery) {
-        String apiKey = "794dfde694ac100dffbd04d05ed2086f";
         return weatherClient.getWeatherData(cityQuery, apiKey, "metric", "pt");
     }
 }
