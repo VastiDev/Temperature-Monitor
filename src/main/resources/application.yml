@@ -17,5 +17,10 @@ spring:
 openweathermap:
   api:
     url: https://api.openweathermap.org/data/2.5
-    key: 794dfde694ac100dffbd04d05ed2086f
+    key: ${openweathermap.api.key}
 
+springdoc:
+  swagger-ui:
+    path: /temperature-monitor/api/swagger-ui.html
+  api-docs:
+    path: /temperature-monitor/api/v3/api-docs
