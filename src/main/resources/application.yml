@@ -21,6 +21,7 @@ openweathermap:
 
 springdoc:
   swagger-ui:
-    path: /temperature-monitor/api/swagger-ui.html
+    path: /swagger-ui.html
   api-docs:
-    path: /temperature-monitor/api/v3/api-docs
+    path: /v3/api-docs
+
